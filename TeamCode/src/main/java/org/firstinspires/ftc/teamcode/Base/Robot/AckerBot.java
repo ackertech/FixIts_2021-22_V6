@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 public class AckerBot extends MecanumDrive {
 
-    //Robot Hardware Constructors   
+    //Robot Hardware Constructors
 
     public HardwareMap hwBot  =  null;
 
