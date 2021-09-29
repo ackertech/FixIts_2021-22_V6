@@ -15,25 +15,25 @@ import org.firstinspires.ftc.teamcode.Base.Robot.LabBot;
 public class LabBotTeleOp extends OpMode {
 
     //TeleOp Variables
-    public double speedMultiply = 1;                        // Controls Speed
+    public double speedMultiply = 0.50;     // Start robot with 50% Speed
 
-    // Construct the Physical Bot based on the Robot Class.  Name your Robot.
+    // Specific which robot class to construct (aka physically use and implement).
     public LabBot Bot = new LabBot();
 
+    // We are choosing to add our own code instead of the code in superclass.
+    @Override
 
     // TeleOp Initialize Method.  This is the Init Button on the Driver Station Phone
-    @Override
     public void init()    {
 
         Bot.initRobot(hardwareMap);
     }
 
     // TeleOp Loop Method.  This start AFTER clicking the Play Button on the Driver Station Phone
-
     public void loop () {
 
-        drive();
-        speedControl();
+        drive();                //Drive Control Method continually looping.  See method definition below.
+        speedControl();         //Speed Control Method continually looping.  See method definition below.
 
     }
 
@@ -65,22 +65,23 @@ public class LabBotTeleOp extends OpMode {
     }
 
 
-    // Control methods for changing speed
+    // Control methods for changing speed by 25%
+
     public void speedControl() {
 
-        if (gamepad1.dpad_down) {
-            speedMultiply = 0.5;
+        if (gamepad1.dpad_right) {
+            speedMultiply = 0.25;
+        }
+        else if (gamepad1.dpad_down) {
+            speedMultiply = 0.50;
+        }
+        else if (gamepad1.dpad_left) {
+            speedMultiply = 0.75;
         }
         else if (gamepad1.dpad_up) {
-            speedMultiply = 1;
+            speedMultiply = 1.0;
         }
     }
-
-
-
-
-
-
 
 
 }
