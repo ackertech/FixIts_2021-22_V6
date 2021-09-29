@@ -1,9 +1,11 @@
 package org.firstinspires.ftc.teamcode.Base.Controls.TeleOp;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-@TeleOp(name = "TeleOp:HelloWorld", group ="Intro")
+//@Disabled
+@TeleOp(name = "TeleOp:HelloWorld", group ="Lessons")
 
 public class HelloWorld extends OpMode {
     @Override

@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.Base.Controls.TeleOp;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
@@ -9,8 +10,8 @@ import org.firstinspires.ftc.teamcode.Base.Robot.AckerBot;
 import org.firstinspires.ftc.teamcode.Base.Robot.LedThread;
 
 
-//@Disabled
-//@TeleOp(name = "TeleOp - AckerBot - Threading")
+@Disabled
+@TeleOp(name = "TeleOp - AckerBot - Threading")
 
 public class ThreadedTeleOp extends OpMode {
 
